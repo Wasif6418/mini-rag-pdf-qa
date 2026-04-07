@@ -44,43 +44,7 @@ mini_rag_pdf_qa/
     qa.py
 ```
 
-## Setup
 
-```bash
-cd /Users/wasif/supportflow/backend/mini_rag_pdf_qa
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-## Run
-
-```bash
-uvicorn app:app --reload
-```
-
-Then open:
-
-```text
-http://127.0.0.1:8000
-```
-
-## API
-
-### `POST /ask`
-
-Multipart form fields:
-
-- `file`: PDF file
-- `question`: user question
-
-Example with `curl`:
-
-```bash
-curl -X POST "http://127.0.0.1:8000/ask" \
-  -F "file=@sample_data/sample_company_handbook.pdf" \
-  -F "question=What does the handbook say about remote work?"
-```
 
 ## Sample PDF
 
@@ -109,21 +73,7 @@ Do not upload:
 - `__pycache__/`
 - local cache files
 
-## GitHub Upload Steps
 
-If you want to upload this as a new GitHub repo:
-
-```bash
-cd /Users/wasif/supportflow/backend/mini_rag_pdf_qa
-git init
-git add .
-git commit -m "Initial commit - mini RAG PDF QA project"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/mini-rag-pdf-qa.git
-git push -u origin main
-```
-
-If GitHub asks for authentication, use your GitHub username and a Personal Access Token.
 
 ## Good GitHub Repo Description
 
